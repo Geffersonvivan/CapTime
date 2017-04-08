@@ -34,7 +34,6 @@ if(!$mail->Send()) {
     echo "Message sent!";
 }
  ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,6 +54,7 @@ if(!$mail->Send()) {
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet”>
 
     <!-- Plugin CSS -->
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
@@ -70,60 +70,140 @@ if(!$mail->Send()) {
     <![endif]-->
 
     <style>
+        html, body{
+            min-height: 100%;
+            height: 100%;
+        }
     header{
     }
 
-        @media (min-width: 991px){
-            h1#homeHeading{
-                font-size: 40px;
-                color: white;
-            }            
+        h1#homeHeading{
+            font-size: 40px;
+            margin-top: 20px;
+            color: #fff;
+            width: 95%;
+            text-align: left;
+        }            
 
-            #main-form{
-                margin-top: 0px;
-            }
+        #main-form{
+            margin-top: 0px;
+            padding: 25px;
+            border-radius: 15px;
+            background-color: rgba(255,255,255,.8);
+        }
 
-            .form-control{
-                background-color: rgba(255,255,255, 0.85);
-                font-family: arial;
-            }
+        .description{
+            font-family: 'Oswald', sans-serif;
+            text-align: left;
+            font-weight: 700!important;
+            color: white !important;
+            max-width: 90% !important;
+            margin-left: 0 !important; 
+        }
+        
+        #main-form *{
+            color: #1e3c70;
+        }
 
-            .form-label{
-                font-family: arial;
-                font-weight: 500;
-            }
+        #main-form button{
+            color: white;
+        }
 
-            .form-radio-label{
-                display: block;
+        .form-control{
+            background-color: rgba(255,255,255, 0.85);
+            font-family: arial;
+        }
 
-            }
+        .form-label{
+            font-family: arial;
+            font-weight: 500;
+        }
 
-            *{
-                color: rgba(255,255,255,0.9);
-            }
+        .form-radio-label{
+            display: block;
 
+        }
+
+        .header .header-content .header-content-inner p{
+            max-width: 0;
+            margin-left: 0;
+        }            
+
+        *{
+            color: white;
+        }
+
+        #main-footer{
+            position: absolute;
+            width: 100%;
+            height: 65px;
+            line-height: 65px;
+            background-color: rgba(108, 24, 113, 0.58) !important;
+            bottom: 0;
+            padding-left: 15px;
+            font-family: arial;
+            left: 0;
+        }
+
+        body{
+            background-image: url(img/header.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        header{
+            background-image: none;
+        }
+
+        @media (max-width: 860px){
+
+        }
+
+        @media (max-width: 992px){
             #main-footer{
-                position: absolute;
-                width: 100%;
-                height: 65px;
-                line-height: 65px;
-                background-color: rgba(0,0,0,.8);
-                bottom: 0;
-                padding-left: 15px;
-                font-family: arial;
-                left: 0;
+                position: relative;
+                background-color: rgba(108, 24, 113, 1) !important;
+            } 
+
+            h1#homeHeading{
+                color: rgba(108, 24, 113, 1) !important;
+                max-width: 100%;
+                text-align: center;
             }
 
-            body{
-                background-image: url(img/header.jpg);
-                background-size: cover;
-                background-position: center;
+            header .header-content .header-content-inner p{
+                max-width: 100% !important;
             }
 
-            header{
-                background-image: none;
+            .description{
+                font-size: 20px !important;
             }
         }
+
+        @media (max-width: 768px) {
+            header .header-content{
+                padding-bottom: 0px !important;
+            }
+
+            #main-form{
+                margin-bottom: 6px;
+            }
+        }
+
+        @media (max-width: 710px){
+            html, body{
+                height: auto;
+            }
+        }
+
+        @media (max-width: 440px){
+            #main-footer{
+                line-height: 1;
+                padding-top: 15px;
+                padding-right: 15px;
+            }
+        }
+
     </style>
 
 </head>
@@ -134,45 +214,19 @@ if(!$mail->Send()) {
         <div class="header-content">
             <div class="header-content-inner">
                 <div class="row">
-                    <div class="col-md-7">
-                        <h1 id="homeHeading">Envie a sua mensagem no tempo!</h1>
+                    <div class="col-md-12">
+                        <h1 id="homeHeading">Obrigado! Em breve você receberá o boleto na sua conta de e-mail. :)</h1>
                         <hr>
-                        <p>E se você pudesse deixar uma mensagem em uma capsula do tempo para ser entrege aos seus familiares depois da sua morte?  </p>
                     </div>
-                    <div class="col-md-5">
-                        <form id="main-form">
-                            <div class="form-group">
-                                <input class="form-control" placeholder="Nome">
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" placeholder="E-mail">
-                            </div>
-                            <div class="form-group text-left">
-                                <label class="form-radio-label">
-                                    <input name="value" type="radio" placeholder="E-mail">
-                                    <span class="form-label">R$40,00 - <small>Envio de áudio e text</small></span>
-                                </label>
-                                <label class="form-radio-label">
-                                    <input name="value" type="radio" placeholder="E-mail">
-                                    <span class="form-label">R$45,00 - <small>Envio de vídeo (até 5 min)</small></span>
-                                </label>
-                            </div>
-                            <div class="text-left">
-                                <button style="border-radius: 5px" class="btn-success btn btn-xl">Gerar boleto</button>
-                            </div>
-                            <div class="text-left" style="margin-top: 15px">
-                                * As instruções de envio e uso serão enviadas juntamente com o boleto bancário  
-                            </div>
-                        </form>
-                    </div>
-                </div>
             </div>
         </div>
     </header>
 
     <footer id="main-footer">
-        Endereço: Rua Nelson Catalan 543, Bairro Efap, Chápeco - SC
+        Endereço: Rua Nelson Catalan 543, Bairro Efapi, Chápeco - SC
     </footer>
+
+    </script>
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
