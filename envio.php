@@ -4,7 +4,7 @@
     $mail = new PHPMailer();
  
 $mail->IsSMTP(); // telling the class to use SMTP
-$mail->SMTPDebug  = 2;                     // enables SMTP debug information (for testing)
+//$mail->SMTPDebug  = 2;                     // enables SMTP debug information (for testing)
 // 1 = errors and messages
 // 2 = messages only
 $mail->SMTPAuth   = true;                  // enable SMTP authentication
