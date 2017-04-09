@@ -1,11 +1,6 @@
 <?php
     include './phpmail/PHPMailerAutoload.php';
 
-    if(empty($_POST)){
-        header('location: index.html');
-        exit();
-    }
-
     $mail = new PHPMailer();
  
 $mail->IsSMTP(); // telling the class to use SMTP
