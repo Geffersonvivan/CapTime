@@ -44,8 +44,10 @@ if(!$mail->Send()) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="img/favicon.png">
 
-    <title>Creative - Start Bootstrap Theme</title>
+    <title>Cápsula de memórias</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
